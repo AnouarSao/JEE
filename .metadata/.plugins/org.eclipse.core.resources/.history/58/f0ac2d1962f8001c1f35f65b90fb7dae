@@ -1,0 +1,46 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Liste des Livres</title>
+</head>
+<body>
+
+	<c:import url="/WEB-INF/menu.jsp" />
+
+	<h3>Liste des Livres</h3>
+
+	<c:choose>
+		<c:when test="${ empty listeLivres }">
+				Aucun livre trouve
+		</c:when>
+		<c:otherwise>
+			<table>
+				<thead>
+					<tr>
+						<th>Titre</th>
+						<!-- <th>Nombre de pages</th> -->
+						<th>Categorie</th>
+					</tr>
+				</thead>
+				<tbody>
+					<c:forEach items="${listeLivres}" var="livre">
+						<tr>
+							<td><c:out value="${ livre.titre }" /></td>
+							<%-- <td><c:out value="${ livre.nbPages }" /></td> --%>
+							<td><c:out value="${ livre.categorie }" /></td>
+							<td>
+								<a href="<c:url value="/DetailsLivre"><c:param name="id" value="${livre.id }" /></c:url>">Voir Detail</a>
+							</td>
+						</tr>
+					</c:forEach>
+				</tbody>
+			</table>
+		</c:otherwise>
+	</c:choose>
+</body>
+</html>

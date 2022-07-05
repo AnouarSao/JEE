@@ -1,0 +1,50 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Liste des Auteurs</title>
+</head>
+<body>
+
+	<c:import url="/WEB-INF/menu.jsp" />
+
+	<h3>Liste des Auteurs</h3>
+
+	<c:choose>
+		<c:when test="${ empty listeAuteurs }">
+			Aucun auteur trouve
+		</c:when>
+		<c:otherwise>
+			<table>
+				<thead>
+					<tr>
+						<th>Nom</th>
+						<th>Prenom</th>
+						<!-- <th>Telephone</th>
+						<th>Email</th> -->
+						<th>Action</th>
+					</tr>
+				</thead>
+				<tbody>
+					<c:forEach items="${listeAuteurs}" var="auteur">
+						<tr>
+							<td><c:out value="${ auteur.nom }" /></td>
+							<td><c:out value="${ auteur.prenom }" /></td>
+							<%-- <td><c:out value="${ auteur.telephone }" /></td>
+							<td><c:out value="${ auteur.email }" /></td> --%>
+							<td>
+								<li><a href="<c:url value="/DetailsAuteurs" /><c:param name="id" value="${auteur.id }"/>Voir</a></li>
+							</td>
+						</tr>
+					</c:forEach>
+
+				</tbody>
+			</table>
+		</c:otherwise>
+	</c:choose>
+</body>
+</html>

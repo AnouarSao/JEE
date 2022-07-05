@@ -1,0 +1,71 @@
+package servlet;
+
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import java.util.Iterator;
+import java.util.List;
+
+import dao.AuteurDao;
+import dao.AuteurDaoImpl;
+import dao.DaoException;
+import dao.DaoFactory;
+import dao.LivreDao;
+import model.Auteur;
+import model.Livre;
+
+/**
+ * Servlet implementation class ListeAuteurs
+ */
+@WebServlet("/ListeAuteurs")
+public class ListeAuteurs extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public ListeAuteurs() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		
+		AuteurDao auteurDao = DaoFactory.getInstance().getAuteurDao();
+		List<Auteur> listeAuteurs;
+		try {
+			listeAuteurs = auteurDao.lister();
+
+			Iterator<Auteur> i = listeAuteurs.iterator();
+			while (i.hasNext()) {
+				System.out.println(i.next());
+			}
+
+		} catch (DaoException e) {
+			e.printStackTrace();
+		}
+
+		request.setAttribute("auteur", listeAuteurs);
+			
+		this.getServletContext().getRequestDispatcher("/WEB-INF/ListeAuteurs.jsp").forward(request, response);
+
+	}
+
+	
+
+}

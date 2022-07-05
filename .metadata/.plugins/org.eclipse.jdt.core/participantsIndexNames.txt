@@ -1,0 +1,15 @@
+INDEX VERSION 1.131
+C:\Users\sanou\Anouar-Sao\perso\poe_java\M2i\Formation\JEE\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1649295501.index
+\BiblioJEE\src\main\java
+C:\Users\sanou\Anouar-Sao\perso\poe_java\M2i\Formation\JEE\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3458242677.index
+\TestJEE\src\main\java
+C:\Users\sanou\Anouar-Sao\perso\poe_java\M2i\Formation\JEE\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1937083067.index
+\BiblioJEE\src\main\java
+C:\Users\sanou\Anouar-Sao\perso\poe_java\M2i\Formation\JEE\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1413352449.index
+\BiblioJEE\src\main\java
+C:\Users\sanou\Anouar-Sao\perso\poe_java\M2i\Formation\JEE\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2959671083.index
+\TestJEE\src\main\java
+C:\Users\sanou\Anouar-Sao\perso\poe_java\M2i\Formation\JEE\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\887631583.index
+\TestJEE\src\main\java
+C:\Users\sanou\Anouar-Sao\perso\poe_java\M2i\Formation\JEE\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4132913734.index
+\TestJEEAnouar\src\main\java

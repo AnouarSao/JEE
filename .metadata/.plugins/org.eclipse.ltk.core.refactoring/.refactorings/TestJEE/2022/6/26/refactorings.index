@@ -1,0 +1,22 @@
+1656335272125	Move 'web.xml' to 'WEB-INF'
+1656336382220	Delete element
+1656337717986	Delete element
+1656337790048	Delete element
+1656337918574	Delete element
+1656338892190	Infer generic type arguments
+1656339224384	Delete element
+1656339249300	Delete element
+1656339279888	Delete element
+1656340058959	Copy compilation units
+1656340075421	Delete element
+1656340077691	Delete element
+1656340124649	Rename type 'HelloSevlet'
+1656421483147	Rename type 'FruitsServlets'
+1656421529347	Rename resource 'Fruits.jsp'
+1656421580554	Rename type 'FruitsJSPServlets'
+1656422864628	Rename type 'FruitsJSPServlet'
+1656422887706	Rename resource 'FruitsJSP.jsp'
+1656422919632	Rename resource 'Exo1JSP.jsp'
+1656423227181	Move file
+1656505432548	Rename resource 'index.html'
+1656505576529	Rename resource 'index.jsp'

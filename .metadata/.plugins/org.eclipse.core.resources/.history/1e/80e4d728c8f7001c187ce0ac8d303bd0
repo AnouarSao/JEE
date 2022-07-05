@@ -1,0 +1,28 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Liste des Livres</title>
+</head>
+<body>
+
+	<c:import url="/WEB-INF/menu.jsp" />
+
+	<h1>Liste des Livres</h1>
+	
+	<c:forEach items="${listeLivres}" var="livre">
+		<c:choose>
+			<c:when test="${ empty livre }">
+				Aucun livre trouve
+			</c:when>
+			<c:otherwise>
+				<c:out value="${livre}" />
+			</c:otherwise>
+		</c:choose>
+	</c:forEach>
+</body>
+</html>

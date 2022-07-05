@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xmlns="http://xmlns.jcp.org/xml/ns/javaee" 
+			xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+			id="WebApp_ID" version="3.1">
+    
+    <!-- HelloServlet -->
+	<servlet>
+		<servlet-name>HelloServlet</servlet-name>
+		<servlet-class>servlets.HelloServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>HelloServlet</servlet-name>
+		<url-pattern>/hello</url-pattern>
+	</servlet-mapping>
+	
+
+	<!-- HelloJSPServlet -->
+	<servlet>
+		<servlet-name>HelloJSPServlet</servlet-name>
+		<servlet-class>servlets.HelloJSPServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>HelloJSPServlet</servlet-name>
+		<url-pattern>/helloJSP</url-pattern>
+	</servlet-mapping>
+	
+	
+	<!-- Exo1 -->
+	<servlet>
+		<servlet-name>Exo1Servlet</servlet-name>
+		<servlet-class>servlets.Exo1Servlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Exo1Servlet</servlet-name>
+		<url-pattern>/Exo1</url-pattern>
+	</servlet-mapping>
+	
+	
+	<!-- Exo2 -->
+	<servlet>
+		<servlet-name>Exo2Servlet</servlet-name>
+		<servlet-class>servlets.Exo2Servlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Exo2Servlet</servlet-name>
+		<url-pattern>/Exo2</url-pattern>
+	</servlet-mapping>
+	
+	<!-- Exo3 -->
+	<servlet>
+		<servlet-name>Exo3Servlet</servlet-name>
+		<servlet-class>servlets.Exo3Servlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Exo3Servlet</servlet-name>
+		<url-pattern>/Exo3</url-pattern>
+	</servlet-mapping>
+
+
+</web-app>

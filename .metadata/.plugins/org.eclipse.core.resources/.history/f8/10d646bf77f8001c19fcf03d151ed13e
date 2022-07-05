@@ -1,0 +1,55 @@
+package servlet;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import dao.livreDao;
+import dao.DaoException;
+import dao.DaoFactory;
+import model.Auteur;
+
+/**
+ * Servlet implementation class AjouterAuteur
+ */
+@WebServlet("/ajouterLivre")
+public class AjouterLivre extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+    
+	private livreDao livreDao;
+	
+    public AjouterLivre() {
+        super();
+        livreDao = DaoFactory.getInstance().getLivreDao();
+    }
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		this.getServletContext().getRequestDispatcher("/WEB-INF/ajouterLivre.jsp").forward(request, response);
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+		String nom = request.getParameter("nomAuteur");
+		String prenom = request.getParameter("prenomAuteur");
+		String telephone = request.getParameter("telephoneAuteur");
+		String email = request.getParameter("emailAuteur");
+		
+		Auteur auteur = new Auteur();
+		auteur.setNom(nom);
+		auteur.setPrenom(prenom);
+		auteur.setTelephone(telephone);
+		auteur.setEmail(email);
+		
+		try {
+			livreDao.creer(auteur);
+		} catch (DaoException e) {
+			e.printStackTrace();
+		}
+		
+		response.sendRedirect( request.getContextPath() + "/listeLivres" );
+	}
+
+}

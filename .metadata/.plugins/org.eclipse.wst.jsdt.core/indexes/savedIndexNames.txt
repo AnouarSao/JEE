@@ -1,0 +1,9 @@
+INDEX VERSION 1.4+C:\Users\sanou\Anouar-Sao\perso\poe_java\M2i\Formation\JEE\eclipse-workspace\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+640502186.index
+498071660.index
+1150468400.index
+1703607489.index
+2227098662.index
+453787748.index
+448740774.index
+1937083067.index

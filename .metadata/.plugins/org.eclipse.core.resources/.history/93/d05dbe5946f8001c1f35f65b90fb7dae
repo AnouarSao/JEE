@@ -1,0 +1,57 @@
+package servlet;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import java.util.Iterator;
+import java.util.List;
+
+import dao.AuteurDao;
+import dao.AuteurDaoImpl;
+import dao.DaoException;
+import dao.DaoFactory;
+import dao.LivreDao;
+import model.Auteur;
+import model.Livre;
+
+/**
+ * Servlet implementation class ListeLivres
+ */
+@WebServlet("/ListeLivres")
+public class ListeLivres extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public ListeLivres() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		LivreDao livreDao = DaoFactory.getInstance().getLivreDao();
+		List<Livre> listeLivres = null;
+		try {
+			listeLivres = livreDao.lister();
+
+		} catch (DaoException e) {
+			e.printStackTrace();
+		}
+
+		request.setAttribute("listeLivres", listeLivres);
+			
+		this.getServletContext().getRequestDispatcher("/WEB-INF/ListeLivres.jsp").forward(request, response);
+	}
+
+
+
+}

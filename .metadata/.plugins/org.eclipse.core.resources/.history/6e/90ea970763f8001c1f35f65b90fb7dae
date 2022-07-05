@@ -1,0 +1,79 @@
+html, body {
+	height: 100%;
+	overflow: hidden;
+}
+
+body {
+	background-image: url("biblio.jpg");
+	background-size: cover;
+	background-position: center;
+  	background-repeat: no-repeat;
+}
+
+/* MENU */
+.menu {
+	max-width: 800px;
+	margin: auto;
+	padding: 10px;
+	border: thick solid #5CB1AF;
+}
+.menu h1 {
+	text-align: center;
+}
+.menu ul {
+  max-width: 450px;
+  list-style-type: none;
+  margin: auto;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.menu li {
+  float: left;
+  width: 150px;
+}
+
+.menu li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.menu li a:hover {
+  background-color: #5CB1AF;
+}
+
+.menu li .active {
+  background-color: #5CB1AF;
+}
+/* END MENU */
+
+
+/* ACCUEIL */
+.home {
+	text-align: center;
+}
+/* END ACCUEIL */
+
+
+/* LISTES */
+.liste table {
+	margin: auto;
+	margin-top: 50px;
+}
+.liste td {
+	padding: 5px;
+}
+.liste .pair {
+	background-color: white;
+}
+
+.liste .impair {
+	background-color: #5CB1AF;
+}
+
+/* END LISTES */
