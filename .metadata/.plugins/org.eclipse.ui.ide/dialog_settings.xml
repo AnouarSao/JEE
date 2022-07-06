@@ -6,6 +6,8 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\sanou\Anouar-Sao\perso\poe_java\M2i\Formation\JEE\eclipse-workspace"/>
+			<item value="C:\Users\sanou\Anouar-Sao\perso\poe_java\M2i\Formation\JEE\Biblio"/>
 			<item value="C:\Users\sanou\Anouar-Sao\perso\poe_java\M2i\Formation\JEE\POEI-SSG-JAVA-300522\TPs\JEE\TestJEE.zip"/>
 			<item value="C:\Users\sanou\Anouar-Sao\perso\poe_java\M2i\Formation\JEE\res\cours-tps\TestJEE\TestJEECorrection"/>
 			<item value="C:\Users\sanou\Anouar-Sao\perso\poe_java\M2i\Formation\JEE\eclipse-workspace\BiblioJEE\src\main\webapp\WEB-INF\lib\jstl-1.2"/>
@@ -18,5 +20,7 @@
 		<item key="DIALOG_WIDTH" value="828"/>
 		<item key="DIALOG_HEIGHT" value="482"/>
 		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-18|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+	</section>
+	<section name="ExternalProjectImportWizard">
 	</section>
 </section>
